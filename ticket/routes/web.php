@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ClientCreateController;
 use App\Http\Controllers\ClientReadeController;
+use App\Http\Controllers\TicketController;
 use App\Http\Controllers\SupportTraitementController;
 use App\Http\Controllers\Admin\CreateUserController;
 use App\Http\Controllers\Admin\AssignTicketController;
@@ -26,6 +27,8 @@ Route::get('/', function () {
 
 
 Route::get('/clients/create','App\Http\Controllers\ClientCreateController@index')->name('create')->middleware(['auth', 'verified']);
+
+Route::post('/clients/create','App\Http\Controllers\ClientCreateController@store')->name('ticket.store')->middleware(['auth', 'verified']);
 
 Route::get('/clients/reade','App\Http\Controllers\ClientReadeController@index')->name('read')->middleware(['auth', 'verified']);
 

@@ -15,19 +15,23 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            @foreach ($ticket as $tickets)
                                 <tr>
-                                <td></td>
                                 <td>
-                                    <div class="form-group">
-                                        <select class="form-control" name="etat">
-                                        <option value="recu">Reçu</option>
-                                        <option value="attente">En attente</option>
-                                        <option value="traitement">Ne pas traiter</option>
-                                        <option value="termine">Terminé</option>
-                                        <option value="cloture">Cloturé</option>
-                                        </select>
-                                    </div>
-                                </td>
+                                    {{ $tickets }}</td>
+                                    <td>
+                                        <div class="form-group">
+                                            <select class="form-control" name="etat">
+                                            <option value="recu">Reçu</option>
+                                            <option value="attente">En attente</option>
+                                            <option value="traitement">Ne pas traiter</option>
+                                            <option value="termine">Terminé</option>
+                                            <option value="cloture">Cloturé</option>
+                                            </select>
+                                        </div>
+                                    </td>
+                                @endforeach
+
                                 </tr>
                             </tbody>
                             </table>

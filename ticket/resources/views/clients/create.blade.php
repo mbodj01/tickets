@@ -7,14 +7,14 @@
             <div class="card">
                 <div class="card-header">{{ __('Creation de ticket') }}</div>
                     <div class="card-body">
-                            <form method="POST" action="">
+                            <form method="POST" action="{{ route('ticket.store') }}">
                                 @csrf
                                 <div class="form-group">
                                     <label for="intitule">Intitulé du ticket</label>
                                     <input type="text" class="form-control" id="intitule" name="intitule" required>
                                 </div>
                                 <div class="form-group">
-                                    <label for="objet">Objet du ticket</label>
+                                    <label for="objet">Description</label>
                                     <input type="text" class="form-control" id="objet" name="objet" required>
                                 </div>
                                 <div class="form-group">

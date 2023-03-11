@@ -3,7 +3,7 @@
 @section('content')
     <div class="container">
         <h1>Suivi des tickets</h1>
-        <table class="table table-bordered">
+        <table class="table table-striped table-bordered">
             <thead>
                 <tr>
                     <th>Intitulé du ticket</th>
@@ -11,9 +11,11 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach ($ticket as $tickets)
                     <tr>
-                        <td></td>
-                        <td></td>
+                        <td>{{ $tickets }}</td>
+                        <td>REÇU</td>
+                        @endforeach
                     </tr>
             </tbody>
         </table>
