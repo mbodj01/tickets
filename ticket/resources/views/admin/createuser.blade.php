@@ -21,16 +21,14 @@
                 </tr>
             </thead>
             <tbody>
-            @foreach ($user as $users)
                     <tr>
-                        <td>{{$users}}</td>
-                        <td></td>
-                        <td></td>
+                        <td>{{$names}}</td>
+                        <td>{{$email}}</td>
+                        <td>{{$role}}</td>
                         <td>
                             <a class="btn btn-primary" href="">Modifier</a>
                             <button type="submit" class="btn btn-danger">Supprimer</button>
                         </td>
-            @endforeach
                     </tr>
             </tbody>
         </table>

@@ -11,11 +11,16 @@ use DB;
 class CreateUserController extends Controller
 {
 
+
     public function index()
     {
-        $user = DB::table('users')->pluck('name','email','role');
-        foreach ($user as $users) {}
-    return view('/admin/createuser', compact('user'));
+        $user = DB::table('users')->get();
+        foreach ($user as $users) {
+        $name = $users->name;
+        $email = $users->email;
+        $role = $users->role;
+    }
+    return view('/admin/createuser', compact('name','email','role'));
     }
 
     public function create()
